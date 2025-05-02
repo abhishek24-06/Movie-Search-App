@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Movie Search</h2>
+  <div class="search-box">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="onSearch()"
+      placeholder="Search movies..."
+      class="search-input"
+    />
+  </div>
+
+  <div class="movie-list">
+    <div *ngFor="let movie of movies" class="movie-card">
+      <h3>{{ movie.title }}</h3>
+      <p>Year: {{ movie.year }}</p>
+      <p>Genre: {{ movie.genre }}</p>
+      <p>Director: {{ movie.director }}</p>
+    </div>
+  </div>
+</div>
